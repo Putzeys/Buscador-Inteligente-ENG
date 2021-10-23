@@ -1,0 +1,1109 @@
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:29:47 -0300
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 599)
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 5491)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:36:29 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 261)
+Completed 200 OK in 18ms (Views: 13.3ms | Allocations: 1166)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-10-23 16:36:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:36:33 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 49)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 487)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:36:58 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 45)
+Completed 200 OK in 6ms (Views: 3.4ms | Allocations: 402)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-10-23 16:36:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/homepage" for 127.0.0.1 at 2021-10-23 16:42:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homepage"):
+  
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:42:36 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.7ms | Allocations: 260)
+Completed 200 OK in 17ms (Views: 14.1ms | Allocations: 1085)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-10-23 16:42:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/homepage/new" for 127.0.0.1 at 2021-10-23 16:42:58 -0300
+Processing by HomepageController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/new.html.erb within layouts/application
+  Rendered homepage/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 147)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1005.2ms | Allocations: 17771)
+Completed 500 Internal Server Error in 1012ms (Allocations: 19165)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homepage/new" for 127.0.0.1 at 2021-10-23 16:43:08 -0300
+Processing by HomepageController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/new.html.erb within layouts/application
+  Rendered homepage/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+[Webpacker] Compiling...
+Started GET "/homepage/" for 127.0.0.1 at 2021-10-23 16:43:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homepage"):
+  
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 798.2ms | Allocations: 43556)
+Completed 500 Internal Server Error in 801ms (Allocations: 43944)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:48:55 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 48)
+Completed 200 OK in 7ms (Views: 3.0ms | Allocations: 420)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:49:03 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 45)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 402)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-23 16:49:04 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/putzeys/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 45)
+Completed 200 OK in 3ms (Views: 1.4ms | Allocations: 402)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-10-23 16:49:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/homepage/new" for 127.0.0.1 at 2021-10-23 16:49:20 -0300
+Processing by HomepageController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/new.html.erb within layouts/application
+  Rendered homepage/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1407.4ms | Allocations: 5791)
+Completed 500 Internal Server Error in 1410ms (Allocations: 6142)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homepage/new" for 127.0.0.1 at 2021-10-23 16:52:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211023195226_create_homes.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:52:50 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211023195226_create_homes.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2021-10-23 16:52:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHomes (20211023195226)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "homes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211023195226"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-23 19:52:54.042860"], ["updated_at", "2021-10-23 19:52:54.042860"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:52:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.1ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:13
+  Rendered homes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1252)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 923.0ms | Allocations: 30359)
+Completed 500 Internal Server Error in 928ms (ActiveRecord: 0.1ms | Allocations: 32410)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/new" for 127.0.0.1 at 2021-10-23 16:53:02 -0300
+Processing by HomesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/homes_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 8.3ms | Allocations: 3669)
+  Rendered homes/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4097)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 719.4ms | Allocations: 10199)
+Completed 500 Internal Server Error in 728ms (ActiveRecord: 0.8ms | Allocations: 14104)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/new" for 127.0.0.1 at 2021-10-23 16:53:10 -0300
+Processing by HomesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 4.2ms | Allocations: 343)
+  Rendered homes/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 460)
+[Webpacker] Compiling...
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:53:11 -0300
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.3ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:13
+  Rendered homes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 881)
+  Rendered layout layouts/application.html.erb (Duration: 739.6ms | Allocations: 12515)
+Completed 500 Internal Server Error in 745ms (ActiveRecord: 0.0ms | Allocations: 13195)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 817.9ms | Allocations: 172597)
+Completed 500 Internal Server Error in 820ms (ActiveRecord: 0.3ms | Allocations: 173025)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homess" for 127.0.0.1 at 2021-10-23 16:53:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homess"):
+  
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:53:30 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.3ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:13
+  Rendered homes/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 722)
+[Webpacker] Compiling...
+Started GET "/homes/new" for 127.0.0.1 at 2021-10-23 16:53:30 -0300
+Processing by HomesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 0.9ms | Allocations: 343)
+  Rendered homes/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 460)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 928.7ms | Allocations: 13130)
+Completed 500 Internal Server Error in 932ms (ActiveRecord: 0.3ms | Allocations: 13500)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 705.5ms | Allocations: 172983)
+Completed 500 Internal Server Error in 706ms (ActiveRecord: 0.0ms | Allocations: 173353)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/index" for 127.0.0.1 at 2021-10-23 16:53:31 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mHome Load (0.2ms)[0m  [1m[34mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1321)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Home with 'id'=index):
+  
+app/controllers/homes_controller.rb:62:in `set_home'
+Started GET "/homes/new" for 127.0.0.1 at 2021-10-23 16:53:39 -0300
+Processing by HomesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 1.4ms | Allocations: 343)
+  Rendered homes/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 460)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 696.5ms | Allocations: 6330)
+Completed 500 Internal Server Error in 700ms (ActiveRecord: 0.0ms | Allocations: 6700)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/new" for 127.0.0.1 at 2021-10-23 16:54:19 -0300
+Processing by HomesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 6.1ms | Allocations: 729)
+  Rendered homes/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1121)
+[Webpacker] Compiling...
+Started GET "/homes/" for 127.0.0.1 at 2021-10-23 16:54:20 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 217)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 911.4ms | Allocations: 14115)
+Completed 500 Internal Server Error in 923ms (ActiveRecord: 0.0ms | Allocations: 15347)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 710.2ms | Allocations: 185887)
+Completed 500 Internal Server Error in 712ms (ActiveRecord: 0.0ms | Allocations: 186431)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/index" for 127.0.0.1 at 2021-10-23 16:54:24 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mHome Load (0.6ms)[0m  [1m[34mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1134)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Home with 'id'=index):
+  
+app/controllers/homes_controller.rb:62:in `set_home'
+Started GET "/homes/index" for 127.0.0.1 at 2021-10-23 16:55:18 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 6ms (Allocations: 3023)
+
+
+  
+NoMethodError (undefined method `set_home' for #<HomesController:0x00000000010388>):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/homes/index" for 127.0.0.1 at 2021-10-23 16:55:59 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+  [1m[36mHome Load (0.1ms)[0m  [1m[34mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms | Allocations: 3267)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Home with 'id'=index):
+  
+app/controllers/homes_controller.rb:62:in `set_home'
+Started GET "/homess/index" for 127.0.0.1 at 2021-10-23 16:56:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homess/index"):
+  
+Started GET "/homes/index" for 127.0.0.1 at 2021-10-23 16:56:58 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mHome Load (0.4ms)[0m  [1m[34mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1061)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Home with 'id'=index):
+  
+app/controllers/homes_controller.rb:62:in `set_home'
+Started GET "/homes/" for 127.0.0.1 at 2021-10-23 16:57:10 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 61)
+[Webpacker] Compiling...
+Started GET "/homes/1" for 127.0.0.1 at 2021-10-23 16:57:10 -0300
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.4ms)[0m  [1m[34mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/homes_controller.rb:62:in `set_home'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1194)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Home with 'id'=1):
+  
+app/controllers/homes_controller.rb:62:in `set_home'
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 937.8ms | Allocations: 111383)
+Completed 500 Internal Server Error in 943ms (ActiveRecord: 0.0ms | Allocations: 111980)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes/" for 127.0.0.1 at 2021-10-23 16:57:13 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 675.0ms | Allocations: 5941)
+Completed 500 Internal Server Error in 677ms (ActiveRecord: 0.0ms | Allocations: 6327)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:57:15 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 666.0ms | Allocations: 5937)
+Completed 500 Internal Server Error in 669ms (ActiveRecord: 0.0ms | Allocations: 6308)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:57:16 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 682.3ms | Allocations: 5938)
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 0.0ms | Allocations: 6308)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:57:56 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.11
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning ../../../../../../../package.json: No license field
+warning ../../../../../../../package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 896.1ms | Allocations: 5938)
+Completed 500 Internal Server Error in 902ms (ActiveRecord: 0.0ms | Allocations: 6308)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/putzeys/Library/Mobile Documents/com~apple~CloudDocs/Personal/FACULDADE/ENG I /BuscadorInteligente/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 16:57:59 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2594)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 3885)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:00:38 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2547)
+Completed 200 OK in 24ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 3983)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:01:56 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2020)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 2539)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:02:51 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2038)
+Completed 200 OK in 21ms (Views: 15.5ms | Allocations: 2442)
+
+
+Started GET "/technical_notes/2" for 127.0.0.1 at 2021-10-23 17:02:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/technical_notes/2"):
+  
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:03:38 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2544)
+Completed 200 OK in 26ms (Views: 17.9ms | Allocations: 3881)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:06:25 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2020)
+Completed 200 OK in 17ms (Views: 12.4ms | Allocations: 2534)
+
+
