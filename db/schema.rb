@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_23_195226) do
+ActiveRecord::Schema.define(version: 2021_10_23_205210) do
+
+  create_table "cadastros", force: :cascade do |t|
+    t.string "name"
+    t.date "birthday_date"
+    t.string "email"
+    t.string "password"
+    t.string "confirm_password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false

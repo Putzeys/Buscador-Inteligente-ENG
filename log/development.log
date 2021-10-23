@@ -1107,3 +1107,300 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 17ms (Views: 12.4ms | Allocations: 2534)
 
 
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:26:10 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 24100)
+Completed 200 OK in 98ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 28434)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:26:14 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2449)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3033)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:26:17 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2327)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started GET "/homes" for 127.0.0.1 at 2021-10-23 17:52:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211023205210_create_cadastros.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/cadastros" for 127.0.0.1 at 2021-10-23 17:52:58 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211023205210_create_cadastros.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCadastros (20211023205210)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "cadastros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birthday_date" date, "email" varchar, "password" varchar, "confirm_password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211023205210"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cadastros" for 127.0.0.1 at 2021-10-23 17:53:16 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.1ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 17443)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.1ms | Allocations: 19557)
+
+
+Started GET "/cadastros/new" for 127.0.0.1 at 2021-10-23 17:53:29 -0300
+Processing by CadastrosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/new.html.erb within layouts/application
+  Rendered cadastros/_form.html.erb (Duration: 26.7ms | Allocations: 7433)
+  Rendered cadastros/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 7807)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 10268)
+Completed 200 OK in 54ms (Views: 32.2ms | ActiveRecord: 2.3ms | Allocations: 15460)
+
+
+Started POST "/cadastros" for 127.0.0.1 at 2021-10-23 17:53:58 -0300
+Processing by CadastrosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cadastro"=>{"name"=>"Putzeys", "birthday_date(1i)"=>"2016", "birthday_date(2i)"=>"8", "birthday_date(3i)"=>"23", "email"=>"sdadssa", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]"}, "commit"=>"Create Cadastro"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cadastros_controller.rb:27:in `block in create'
+  [1m[36mCadastro Create (2.5ms)[0m  [1m[32mINSERT INTO "cadastros" ("name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Putzeys"], ["birthday_date", "2016-08-23"], ["email", "sdadssa"], ["password", "123"], ["confirm_password", "123"], ["created_at", "2021-10-23 20:53:58.915256"], ["updated_at", "2021-10-23 20:53:58.915256"]]
+  ↳ app/controllers/cadastros_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cadastros_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/cadastros/1
+Completed 302 Found in 19ms (ActiveRecord: 3.2ms | Allocations: 3627)
+
+
+Started GET "/cadastros/1" for 127.0.0.1 at 2021-10-23 17:53:58 -0300
+Processing by CadastrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCadastro Load (0.2ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros" WHERE "cadastros"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cadastros_controller.rb:62:in `set_cadastro'
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/show.html.erb within layouts/application
+  Rendered cadastros/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2922)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 4958)
+
+
+Started GET "/cadastros/1/edit" for 127.0.0.1 at 2021-10-23 17:54:10 -0300
+Processing by CadastrosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCadastro Load (2.4ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros" WHERE "cadastros"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cadastros_controller.rb:62:in `set_cadastro'
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/edit.html.erb within layouts/application
+  Rendered cadastros/_form.html.erb (Duration: 7.5ms | Allocations: 2151)
+  Rendered cadastros/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2433)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4792)
+Completed 200 OK in 28ms (Views: 16.6ms | ActiveRecord: 2.4ms | Allocations: 5964)
+
+
+Started GET "/cadastros" for 127.0.0.1 at 2021-10-23 17:54:13 -0300
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.4ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 853)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3224)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 3685)
+
+
+Started GET "/cadastros/1" for 127.0.0.1 at 2021-10-23 17:54:19 -0300
+Processing by CadastrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCadastro Load (0.3ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros" WHERE "cadastros"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cadastros_controller.rb:62:in `set_cadastro'
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/show.html.erb within layouts/application
+  Rendered cadastros/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2497)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 3500)
+
+
+Started GET "/cadastros" for 127.0.0.1 at 2021-10-23 17:54:21 -0300
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.3ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 842)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3213)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 3673)
+
+
+Started GET "/cadastros/new" for 127.0.0.1 at 2021-10-23 17:54:41 -0300
+Processing by CadastrosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/new.html.erb within layouts/application
+  Rendered cadastros/_form.html.erb (Duration: 9.4ms | Allocations: 2027)
+  Rendered cadastros/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2144)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4503)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 4972)
+
+
+Started GET "/cadastros" for 127.0.0.1 at 2021-10-23 17:54:46 -0300
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.6ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 842)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3213)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 0.6ms | Allocations: 3673)
+
+
+Started GET "/cadastros/new" for 127.0.0.1 at 2021-10-23 17:54:52 -0300
+Processing by CadastrosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/new.html.erb within layouts/application
+  Rendered cadastros/_form.html.erb (Duration: 11.7ms | Allocations: 2005)
+  Rendered cadastros/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2122)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4481)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 4946)
+
+
+Started GET "/cadastros/new" for 127.0.0.1 at 2021-10-23 17:55:31 -0300
+Processing by CadastrosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/new.html.erb within layouts/application
+  Rendered cadastros/_form.html.erb (Duration: 13.0ms | Allocations: 2603)
+  Rendered cadastros/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 2998)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5669)
+Completed 200 OK in 41ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 7024)
+
+

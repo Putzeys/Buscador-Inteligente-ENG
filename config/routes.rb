@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cadastros
   resources :homes
   get 'homepage/new'
   get 'homepage/create'
