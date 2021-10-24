@@ -1,42 +1,17 @@
-<%= form_with(model: cadastro) do |form| %>
-  <% if cadastro.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(cadastro.errors.count, "error") %> prohibited this cadastro from being saved:</h2>
+<%= simple_form_for(@cadastro) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <ul>
-        <% cadastro.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class = "form-inputs">
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <%=f.input :name, label: "Nome Completo", error: "Nome completo é obrigatório", placeholder: "João da Silva" %>
+  <%=f.input :birthday_date, label: "Data de aniversário"%>
+  <%=f.input :email, placeholder: "user@domain.com", label: "Email"%>
+  <%=f.input :password, label: "Senha"%>
+  <%=f.input :confirm_password, label: "Confirmar Senha"%>
   </div>
 
-  <div class="field">
-    <%= form.label :birthday_date %>
-    <%= form.date_select :birthday_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
-  </div>
-
-  <div class="field">
-    <%= form.label :confirm_password %>
-    <%= form.text_field :confirm_password %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
