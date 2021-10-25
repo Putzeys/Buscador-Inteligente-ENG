@@ -1,0 +1,415 @@
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cadastros"[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "cadastros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birthday_date" date, "email" varchar, "password" varchar, "confirm_password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "homes"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "homes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios"[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211025141514)[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211023195226),
+(20211023205210);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-10-25 20:09:42.938969"], ["updated_at", "2021-10-25 20:09:42.938969"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fae2cae40144c4e420acf8c0ddac5228a1147079"], ["created_at", "2021-10-25 20:09:42.947264"], ["updated_at", "2021-10-25 20:09:42.947264"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cadastros"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "cadastros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birthday_date" date, "email" varchar, "password" varchar, "confirm_password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "homes"[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "homes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cadastros"[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "cadastros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birthday_date" date, "email" varchar, "password" varchar, "confirm_password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "homes"[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211025141514)[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211023195226),
+(20211023205210);
+
+[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "homes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios"[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211025141514)[0m
+  [1m[35m (4.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211023195226),
+(20211023205210);
+
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-10-25 20:09:43.268445"], ["updated_at", "2021-10-25 20:09:43.268445"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fae2cae40144c4e420acf8c0ddac5228a1147079"], ["created_at", "2021-10-25 20:09:43.277990"], ["updated_at", "2021-10-25 20:09:43.277990"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-10-25 20:09:43.294726"], ["updated_at", "2021-10-25 20:09:43.294726"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.313625', '2021-10-25 20:09:43.313625');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.313625', '2021-10-25 20:09:43.313625');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.315437', '2021-10-25 20:09:43.315437');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.315437', '2021-10-25 20:09:43.315437');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.316151', '2021-10-25 20:09:43.316151');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.316151', '2021-10-25 20:09:43.316151')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (7.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fae2cae40144c4e420acf8c0ddac5228a1147079"], ["created_at", "2021-10-25 20:09:43.314416"], ["updated_at", "2021-10-25 20:09:43.314416"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.338796', '2021-10-25 20:09:43.338796');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.338796', '2021-10-25 20:09:43.338796');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.340565', '2021-10-25 20:09:43.340565');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.340565', '2021-10-25 20:09:43.340565');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.341416', '2021-10-25 20:09:43.341416');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.341416', '2021-10-25 20:09:43.341416')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.8ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.462620', '2021-10-25 20:09:43.462620');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.462620', '2021-10-25 20:09:43.462620');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.462806', '2021-10-25 20:09:43.462806');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.462806', '2021-10-25 20:09:43.462806');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.462832', '2021-10-25 20:09:43.462832');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.462832', '2021-10-25 20:09:43.462832')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.485401', '2021-10-25 20:09:43.485401');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.485401', '2021-10-25 20:09:43.485401');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.485464', '2021-10-25 20:09:43.485464');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.485464', '2021-10-25 20:09:43.485464');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.485483', '2021-10-25 20:09:43.485483');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.485483', '2021-10-25 20:09:43.485483')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (8.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.479851', '2021-10-25 20:09:43.479851');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.479851', '2021-10-25 20:09:43.479851');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.479928', '2021-10-25 20:09:43.479928');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.479928', '2021-10-25 20:09:43.479928');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.479951', '2021-10-25 20:09:43.479951');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.479951', '2021-10-25 20:09:43.479951')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.8ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.503970', '2021-10-25 20:09:43.503970');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.503970', '2021-10-25 20:09:43.503970');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.504025', '2021-10-25 20:09:43.504025');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.504025', '2021-10-25 20:09:43.504025');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.504045', '2021-10-25 20:09:43.504045');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.504045', '2021-10-25 20:09:43.504045')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (8.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.503909', '2021-10-25 20:09:43.503909');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.503909', '2021-10-25 20:09:43.503909');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.503969', '2021-10-25 20:09:43.503969');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.503969', '2021-10-25 20:09:43.503969');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.503991', '2021-10-25 20:09:43.503991');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.503991', '2021-10-25 20:09:43.503991')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.524514', '2021-10-25 20:09:43.524514');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.524514', '2021-10-25 20:09:43.524514');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.524575', '2021-10-25 20:09:43.524575');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.524575', '2021-10-25 20:09:43.524575');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.524596', '2021-10-25 20:09:43.524596');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.524596', '2021-10-25 20:09:43.524596')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (7.9ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.523404', '2021-10-25 20:09:43.523404');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.523404', '2021-10-25 20:09:43.523404');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.523498', '2021-10-25 20:09:43.523498');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.523498', '2021-10-25 20:09:43.523498');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.523523', '2021-10-25 20:09:43.523523');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.523523', '2021-10-25 20:09:43.523523')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.1ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.540527', '2021-10-25 20:09:43.540527');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.540527', '2021-10-25 20:09:43.540527');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.540582', '2021-10-25 20:09:43.540582');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.540582', '2021-10-25 20:09:43.540582');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.540601', '2021-10-25 20:09:43.540601');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.540601', '2021-10-25 20:09:43.540601')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (9.0ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.540532', '2021-10-25 20:09:43.540532');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.540532', '2021-10-25 20:09:43.540532');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.540582', '2021-10-25 20:09:43.540582');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.540582', '2021-10-25 20:09:43.540582');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.540601', '2021-10-25 20:09:43.540601');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.540601', '2021-10-25 20:09:43.540601')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.559616', '2021-10-25 20:09:43.559616');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.559616', '2021-10-25 20:09:43.559616');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.559666', '2021-10-25 20:09:43.559666');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.559666', '2021-10-25 20:09:43.559666');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.559684', '2021-10-25 20:09:43.559684');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.559684', '2021-10-25 20:09:43.559684')[0m
+  [1m[36mFixtures Load (6.2ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.559609', '2021-10-25 20:09:43.559609');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.559609', '2021-10-25 20:09:43.559609');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.559662', '2021-10-25 20:09:43.559662');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.559662', '2021-10-25 20:09:43.559662');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.559682', '2021-10-25 20:09:43.559682');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.559682', '2021-10-25 20:09:43.559682')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[36mFixtures Load (7.6ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.580119', '2021-10-25 20:09:43.580119');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.580119', '2021-10-25 20:09:43.580119');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.580183', '2021-10-25 20:09:43.580183');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.580183', '2021-10-25 20:09:43.580183');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.580204', '2021-10-25 20:09:43.580204');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.580204', '2021-10-25 20:09:43.580204')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.588482', '2021-10-25 20:09:43.588482');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.588482', '2021-10-25 20:09:43.588482');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.588537', '2021-10-25 20:09:43.588537');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.588537', '2021-10-25 20:09:43.588537');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.588556', '2021-10-25 20:09:43.588556');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.588556', '2021-10-25 20:09:43.588556')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (1.9ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.9ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.594024', '2021-10-25 20:09:43.594024');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.594024', '2021-10-25 20:09:43.594024');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.594080', '2021-10-25 20:09:43.594080');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.594080', '2021-10-25 20:09:43.594080');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.594100', '2021-10-25 20:09:43.594100');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.594100', '2021-10-25 20:09:43.594100')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.606821', '2021-10-25 20:09:43.606821');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.606821', '2021-10-25 20:09:43.606821');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.606877', '2021-10-25 20:09:43.606877');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.606877', '2021-10-25 20:09:43.606877');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.606896', '2021-10-25 20:09:43.606896');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.606896', '2021-10-25 20:09:43.606896')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.609932', '2021-10-25 20:09:43.609932');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.609932', '2021-10-25 20:09:43.609932');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.609985', '2021-10-25 20:09:43.609985');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.609985', '2021-10-25 20:09:43.609985');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.610005', '2021-10-25 20:09:43.610005');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.610005', '2021-10-25 20:09:43.610005')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "cadastros";
+DELETE FROM "homes";
+DELETE FROM "usuarios";
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.620774', '2021-10-25 20:09:43.620774');
+INSERT INTO "cadastros" ("id", "name", "birthday_date", "email", "password", "confirm_password", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-10-23', 'MyString', 'MyString', 'MyString', '2021-10-25 20:09:43.620774', '2021-10-25 20:09:43.620774');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.620828', '2021-10-25 20:09:43.620828');
+INSERT INTO "homes" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.620828', '2021-10-25 20:09:43.620828');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (980190962, '2021-10-25 20:09:43.620846', '2021-10-25 20:09:43.620846');
+INSERT INTO "usuarios" ("id", "created_at", "updated_at") VALUES (298486374, '2021-10-25 20:09:43.620846', '2021-10-25 20:09:43.620846')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

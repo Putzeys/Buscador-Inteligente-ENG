@@ -1,5 +1,7 @@
 class HomesController < ApplicationController
   before_action :set_home, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate_usuario!, only: %i[ index ]
+
 
   # GET /homes or /homes.json
   def index

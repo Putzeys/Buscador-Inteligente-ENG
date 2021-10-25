@@ -18,7 +18,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="buscador-inteligente w3-red w3-card w3-left-align w3-large">
     <a class="buscador-inteligente-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="buscador-inteligente-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="buscador-inteligente-item w3-button w3-padding-large w3-white">BuscadorInteligente</a>
+
+    <% if usuario_signed_in? %>
+        <%= button_to "Sair", destroy_usuario_session_path, method: :delete,
+        :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right", 
+        form: {style: 'display: inline'} %>
+    <% else %>
+      <%= link_to "Criar conta", new_usuario_registration_path, :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right w3-border-left" %>
+      <%= link_to "Entrar", new_usuario_session_path, :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right" %>
+    <% end %>
+
   </div>
 
   <!-- Navbar on small screens -->

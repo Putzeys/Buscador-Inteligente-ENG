@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :usuarios
   root 'homes#index'
   get 'sessions/new'
   get 'sessions/create'
