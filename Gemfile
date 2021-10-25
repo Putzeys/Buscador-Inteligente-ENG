@@ -13,6 +13,8 @@ gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
 #Simple_form
 gem 'simple_form'
+# Devise
+gem 'devise'
 #Trix (rich text)
 gem 'trix-rails', require: 'trix'
 # Use Puma as the app server

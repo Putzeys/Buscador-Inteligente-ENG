@@ -5109,3 +5109,51 @@ Processing by CadastrosController#index as HTML
 Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 7596)
 
 
+Started GET "/cadastros/2" for ::1 at 2021-10-25 11:13:38 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CadastrosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCadastro Load (1.6ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros" WHERE "cadastros"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cadastros_controller.rb:62:in `set_cadastro'
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/show.html.erb within layouts/application
+  Rendered cadastros/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 126.3ms | Allocations: 13887)
+Completed 200 OK in 270ms (Views: 134.3ms | ActiveRecord: 2.3ms | Allocations: 24524)
+
+
+Started GET "/cadastros/" for ::1 at 2021-10-25 11:13:44 -0300
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.2ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1588)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 6183)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.2ms | Allocations: 6937)
+
+
+Started GET "/cadastros/1" for ::1 at 2021-10-25 11:13:47 -0300
+Processing by CadastrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCadastro Load (0.1ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros" WHERE "cadastros"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cadastros_controller.rb:62:in `set_cadastro'
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/show.html.erb within layouts/application
+  Rendered cadastros/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4528)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 5585)
+
+
+Started GET "/cadastros/" for ::1 at 2021-10-25 11:13:51 -0300
+Processing by CadastrosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.1ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5405)
+Completed 200 OK in 26ms (Views: 18.4ms | ActiveRecord: 0.1ms | Allocations: 5868)
+
+
