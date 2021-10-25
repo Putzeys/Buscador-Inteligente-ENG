@@ -7,6 +7,10 @@ ruby '3.0.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
+# Bootstrap
+gem 'bootstrap', '~> 5.1.0'
+# JQuery
+gem 'jquery-rails'
 #Simple_form
 gem 'simple_form'
 #Trix (rich text)
