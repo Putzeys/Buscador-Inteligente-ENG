@@ -11,18 +11,18 @@
                     required: true,
                     autofocus: true,
                     label_html: { class: "mb-2 mt-2" },
-                    input_html: { autocomplete: "email"}%>
+                    input_html: { autocomplete: "email", placeholder: "exemplo@email.com"}%>
         <%= f.input :password,
                     required: true,
                     hint: ("É necessário pelo menos #{@minimum_password_length} caracteres" if @minimum_password_length),
                     label: 'Senha',
                     label_html: { class: "mb-2 mt-3" },
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password", placeholder: "Digite sua senha..." } %>
         <%= f.input :password_confirmation,
                     required: true,
                     label: 'Confirme sua senha',
                     label_html: { class: "mb-2 mt-3" },
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password", placeholder: "Confirme sua senha..." } %>
       </div>
 
       <div class="form-actions mt-4 mx-auto d-grid gap-2 col-5">

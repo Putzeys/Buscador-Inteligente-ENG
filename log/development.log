@@ -9532,3 +9532,288 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 18025)
 
 
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 15:58:46 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 596.4ms | Allocations: 18035)
+  Rendered layout layouts/application.html.erb (Duration: 2161.5ms | Allocations: 31450)
+Completed 200 OK in 2202ms (Views: 2174.3ms | ActiveRecord: 0.4ms | Allocations: 42641)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 15:59:16 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 55.2ms | Allocations: 12947)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 17654)
+Completed 200 OK in 93ms (Views: 68.9ms | ActiveRecord: 0.0ms | Allocations: 23684)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 16:00:36 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (9.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "nathanatrix@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 11681)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 16293)
+Completed 200 OK in 530ms (Views: 55.3ms | ActiveRecord: 9.6ms | Allocations: 24974)
+
+
+Started GET "/info" for ::1 at 2021-10-26 16:21:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/info"):
+  
+Started GET "/" for ::1 at 2021-10-26 16:22:10 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 95.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 101.3ms | Allocations: 5401)
+Completed 200 OK in 108ms (Views: 105.3ms | Allocations: 7403)
+
+
+Started GET "/" for ::1 at 2021-10-26 16:22:11 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4592)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 5111)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:22:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.0ms | Allocations: 15813)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 20506)
+Completed 200 OK in 43ms (Views: 41.7ms | Allocations: 22522)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:23:28 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.7ms | Allocations: 15356)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 20345)
+Completed 200 OK in 32ms (Views: 31.6ms | Allocations: 22416)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:24:12 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 10623)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 15619)
+Completed 200 OK in 51ms (Views: 49.7ms | Allocations: 17709)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:24:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 10634)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 15627)
+Completed 200 OK in 31ms (Views: 30.6ms | Allocations: 17711)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:24:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 10626)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 15616)
+Completed 200 OK in 30ms (Views: 28.9ms | Allocations: 17713)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:25:00 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 10952)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 15944)
+Completed 200 OK in 25ms (Views: 24.5ms | Allocations: 17954)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:25:02 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.0ms | Allocations: 10620)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 15301)
+Completed 200 OK in 46ms (Views: 33.5ms | Allocations: 16786)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:25:03 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 10415)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 15000)
+Completed 200 OK in 33ms (Views: 32.5ms | Allocations: 15686)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:25:05 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 10118)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 14618)
+Completed 200 OK in 23ms (Views: 22.3ms | Allocations: 15307)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:25:15 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 10405)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 14901)
+Completed 200 OK in 26ms (Views: 25.3ms | Allocations: 15509)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:25:16 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 10116)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 14611)
+Completed 200 OK in 45ms (Views: 43.7ms | Allocations: 15286)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:25:19 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 10401)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 14897)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 15506)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:25:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 10128)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 14711)
+Completed 200 OK in 38ms (Views: 32.7ms | Allocations: 15390)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:25:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 10572)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 15565)
+Completed 200 OK in 30ms (Views: 29.0ms | Allocations: 17564)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:28:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.1ms | Allocations: 10510)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 15498)
+Completed 200 OK in 36ms (Views: 34.7ms | Allocations: 17568)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:30:06 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 10777)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 15777)
+Completed 200 OK in 37ms (Views: 36.5ms | Allocations: 17770)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:31:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 10519)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 15214)
+Completed 200 OK in 36ms (Views: 35.3ms | Allocations: 16713)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-10-26 16:31:14 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (12.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "nathanatrix@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 2], ["current_sign_in_at", "2021-10-26 19:31:15.015286"], ["updated_at", "2021-10-26 19:31:15.015588"], ["id", 1]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 502ms (ActiveRecord: 21.2ms | Allocations: 13365)
+
+
+Started GET "/" for ::1 at 2021-10-26 16:31:15 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 189)
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 6074)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms | Allocations: 7324)
+
+
+Started DELETE "/usuarios/sign_out" for ::1 at 2021-10-26 16:31:30 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 0.1ms | Allocations: 2472)
+
+
+Started GET "/" for ::1 at 2021-10-26 16:31:30 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4742)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 5297)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:31:34 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 10328)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 14824)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 15446)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:31:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 10002)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 14585)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.0ms | Allocations: 15276)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 16:31:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 10222)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 14806)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 15421)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 16:31:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 9992)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 14492)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 15173)
+
+
