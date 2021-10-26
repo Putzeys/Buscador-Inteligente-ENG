@@ -7864,3 +7864,50 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 295ms (Views: 278.3ms | ActiveRecord: 0.0ms | Allocations: 18307)
 
 
+Started GET "/" for ::1 at 2021-10-25 21:44:30 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5307)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 6877)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-25 21:44:44 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 24.8ms | Allocations: 692)
+  Rendered /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4209.5ms | Allocations: 5533)
+  Rendered layout layouts/application.html.erb (Duration: 4220.3ms | Allocations: 10306)
+Completed 200 OK in 4249ms (Views: 4229.3ms | ActiveRecord: 0.7ms | Allocations: 19456)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-25 21:45:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 559)
+  Rendered /home/nathan/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2126)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7115)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9354)
+
+
+Started GET "/" for ::1 at 2021-10-25 21:46:02 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 210)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5319)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 6820)
+
+
+Started GET "/" for ::1 at 2021-10-25 21:46:11 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4590)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5127)
+
+
