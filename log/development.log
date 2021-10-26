@@ -7960,3 +7960,1575 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5301)
 
 
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-25 21:56:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 591)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6414.5ms | Allocations: 24467)
+  Rendered layout layouts/application.html.erb (Duration: 6427.1ms | Allocations: 29555)
+Completed 200 OK in 6434ms (Views: 6432.5ms | Allocations: 31575)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:56:47 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.6ms | Allocations: 11716)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 16492)
+Completed 200 OK in 30ms (Views: 29.0ms | Allocations: 18068)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:57:49 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 11756)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 16835)
+Completed 200 OK in 36ms (Views: 34.3ms | Allocations: 18824)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:58:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 11765)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 16761)
+Completed 200 OK in 30ms (Views: 28.0ms | Allocations: 18758)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:59:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 11763)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 16834)
+Completed 200 OK in 26ms (Views: 25.1ms | Allocations: 18827)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:59:40 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 10729)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 15269)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 15950)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:59:40 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 10729)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 15279)
+Completed 200 OK in 19ms (Views: 18.1ms | Allocations: 15888)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 21:59:57 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1364)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1439)
+Completed 500 Internal Server Error in 6ms (Allocations: 3336)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" },
+                  class: => "mb-5" %>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email" },
+13:                      class: => "mb-5" %>
+14:          <%= f.input :password,
+15:                      required: true,
+16:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+17:                      input_html: { autocomplete: "new-password" } %>
+18:          <%= f.input :password_confirmation,
+19:                      required: true,
+20:                      input_html: { autocomplete: "new-password" } %>
+21:        </div>
+22:    
+23:        <div class="form-actions">
+24:          <%= f.button :submit, "Sign up" %>
+25:        </div>
+26:      <% end %>
+27:    
+28:      <%= render "devise/shared/links" %>
+29:    
+30:    </div>
+  
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected =>
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:00:06 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 11843)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 16927)
+Completed 200 OK in 51ms (Views: 50.3ms | Allocations: 18945)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:00:08 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 10810)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 15395)
+Completed 200 OK in 28ms (Views: 26.0ms | Allocations: 16080)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:01:31 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1347)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1422)
+Completed 500 Internal Server Error in 5ms (Allocations: 3302)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }, class: => "mb-5"%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email" }, class: => "mb-5"%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:01:46 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1345)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1420)
+Completed 500 Internal Server Error in 9ms (Allocations: 3391)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }, class: => "mb-5" %>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email" }, class: => "mb-5" %>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:01:58 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1345)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1420)
+Completed 500 Internal Server Error in 5ms (Allocations: 3389)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }, class => "mb-5" %>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email" }, class => "mb-5" %>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+app/views/devise/registrations/new.html.erb:12: syntax error, unexpected =>
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:02:10 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 11842)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 16926)
+Completed 200 OK in 34ms (Views: 32.9ms | Allocations: 18938)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:08:25 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 512)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 11835)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 16919)
+Completed 200 OK in 43ms (Views: 42.3ms | Allocations: 18938)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:08:27 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 10802)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 15299)
+Completed 200 OK in 34ms (Views: 32.6ms | Allocations: 15981)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:08:53 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 11829)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 16913)
+Completed 200 OK in 35ms (Views: 34.7ms | Allocations: 18836)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:08:56 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 10800)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 15297)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 15978)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:09:28 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 11847)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 16931)
+Completed 200 OK in 34ms (Views: 32.8ms | Allocations: 18857)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:10:05 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 11845)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 16896)
+Completed 200 OK in 26ms (Views: 24.9ms | Allocations: 18883)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:10:20 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 11839)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 16919)
+Completed 200 OK in 34ms (Views: 33.2ms | Allocations: 18916)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:13:14 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1428)
+Completed 500 Internal Server Error in 6ms (Allocations: 3383)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)), :html => { class: "form-control" } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "mb-3" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)), :html => { class: "form-control" } do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email", class: "mb-3" }%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:13:27 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1350)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1425)
+Completed 500 Internal Server Error in 7ms (Allocations: 3394)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)), :html=> { class: "form-control" } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "mb-3" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)), :html=> { class: "form-control" } do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email", class: "mb-3" }%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected =>, expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:13:53 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1430)
+Completed 500 Internal Server Error in 7ms (Allocations: 3399)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: "form-control" } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "mb-3" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: "form-control" } do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email", class: "mb-3" }%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:13:57 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1368)
+Completed 500 Internal Server Error in 3ms (Allocations: 2030)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: "form-control" } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "mb-3" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: "form-control" } do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email", class: "mb-3" }%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:14:20 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1429)
+Completed 500 Internal Server Error in 7ms (Allocations: 3309)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5">
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: 'form-control' } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "mb-3" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password", class: "mb-3" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5">
+3:      <h2>Sign up</h2>
+4:    
+5:      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) :html=> { class: 'form-control' } do |f| %>
+6:        <%= f.error_notification %>
+7:    
+8:        <div class="form-inputs">
+9:          <%= f.input :email,
+10:                      required: true,
+11:                      autofocus: true,
+12:                      input_html: { autocomplete: "email", class: "mb-3" }%>
+13:          <%= f.input :password,
+14:                      required: true,
+15:                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+16:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+17:          <%= f.input :password_confirmation,
+18:                      required: true,
+19:                      input_html: { autocomplete: "new-password", class: "mb-3" } %>
+20:        </div>
+21:    
+22:        <div class="form-actions">
+23:          <%= f.button :submit, "Sign up" %>
+24:        </div>
+25:      <% end %>
+26:    
+27:      <%= render "devise/shared/links" %>
+28:    
+29:    </div>
+  
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected ':', expecting `end'
+app/views/devise/registrations/new.html.erb:5: syntax error, unexpected `do', expecting `end'
+app/views/devise/registrations/new.html.erb:32: syntax error, unexpected `end', expecting end-of-input
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:19:24 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 11864)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 16949)
+Completed 200 OK in 38ms (Views: 36.2ms | Allocations: 18961)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:19:48 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 11855)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 16939)
+Completed 200 OK in 39ms (Views: 36.3ms | Allocations: 18937)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:19:51 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 109)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 13242)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 17738)
+Completed 200 OK in 786ms (Views: 37.1ms | ActiveRecord: 0.4ms | Allocations: 21967)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:22:03 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 512)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 50.6ms | Allocations: 14129)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 19212)
+Completed 200 OK in 71ms (Views: 66.3ms | ActiveRecord: 0.0ms | Allocations: 23394)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:22:07 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 13060)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 17644)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.0ms | Allocations: 19621)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:22:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 14105)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 19100)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 23297)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:22:23 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.9ms | Allocations: 13075)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 17659)
+Completed 200 OK in 50ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 19639)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:23:13 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 14114)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 19197)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 23392)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:23:15 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.5ms | Allocations: 13069)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 17653)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 19629)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:23:39 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 14108)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 19175)
+Completed 200 OK in 40ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 23371)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:24:21 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 512)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 106.2ms | Allocations: 14123)
+  Rendered layout layouts/application.html.erb (Duration: 116.3ms | Allocations: 19206)
+Completed 200 OK in 127ms (Views: 119.2ms | ActiveRecord: 0.0ms | Allocations: 23505)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:24:43 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 14108)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 19187)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 23486)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:25:00 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 54.1ms | Allocations: 14113)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 19175)
+Completed 200 OK in 93ms (Views: 84.0ms | ActiveRecord: 0.0ms | Allocations: 23474)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:27:46 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 514)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 14127)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 19215)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 23503)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:27:50 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 13067)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 17605)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 19581)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:28:01 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5022)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5096)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 9263)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `teste' for #<ActionView::Base:0x0000000000f758>
+Did you mean?  test):
+    10:         <%= f.input :email,
+    11:                     required: true,
+    12:                     autofocus: true,
+    13:                     label_html: { class: "mb-2", :name => teste },
+    14:                     input_html: { autocomplete: "email", class: "mb-3" }%>
+    15:         <%= f.input :password,
+    16:                     required: true,
+  
+app/views/devise/registrations/new.html.erb:13
+app/views/devise/registrations/new.html.erb:6
+Started POST "/usuarios" for ::1 at 2021-10-25 22:28:30 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 14132)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 19215)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 23535)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:28:33 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.8ms | Allocations: 13062)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 17558)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 19533)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:28:55 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 48.8ms | Allocations: 14109)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 19104)
+Completed 200 OK in 81ms (Views: 70.5ms | ActiveRecord: 0.0ms | Allocations: 23276)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:28:58 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 13073)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 17657)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 19635)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:30:31 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 13982)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 19065)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 23259)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:31:42 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1386)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5631)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="container mx-auto mt-5", style="max-width: 500px">
+  <h2 class="text-center">Sign up</h2>
+
+  <div class="form-control">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    label_html: { class: "mb-2" },
+                    input_html: { autocomplete: "email", class: "mb-3" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    label: 'Senha',
+                    label_html: { class: "mb-2" },
+                    input_html: { autocomplete: "new-password", class: "mb-3" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    label: 'Confirme sua senha'
+                    label_html: { class: "mb-2" },
+                    input_html: { autocomplete: "new-password", class: "mb-3" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+  
+
+</div>
+
+):
+1:    
+2:    <div class="container mx-auto mt-5", style="max-width: 500px">
+3:      <h2 class="text-center">Sign up</h2>
+4:    
+5:      <div class="form-control">
+6:        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+7:          <%= f.error_notification %>
+8:    
+9:          <div class="form-inputs">
+10:            <%= f.input :email,
+11:                        required: true,
+12:                        autofocus: true,
+13:                        label_html: { class: "mb-2" },
+14:                        input_html: { autocomplete: "email", class: "mb-3" }%>
+15:            <%= f.input :password,
+16:                        required: true,
+17:                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+18:                        label: 'Senha',
+19:                        label_html: { class: "mb-2" },
+20:                        input_html: { autocomplete: "new-password", class: "mb-3" } %>
+21:            <%= f.input :password_confirmation,
+22:                        required: true,
+23:                        label: 'Confirme sua senha'
+24:                        label_html: { class: "mb-2" },
+25:                        input_html: { autocomplete: "new-password", class: "mb-3" } %>
+26:          </div>
+27:    
+28:          <div class="form-actions">
+29:            <%= f.button :submit, "Sign up" %>
+30:          </div>
+31:        <% end %>
+32:        <%= render "devise/shared/links" %>
+33:      </div>
+34:      
+35:    
+36:    </div>
+  
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:24: syntax error, unexpected ',', expecting ')'
+Started POST "/usuarios" for ::1 at 2021-10-25 22:31:54 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 13858)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 18941)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 23259)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:36:54 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 631)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.3ms | Allocations: 21323)
+  Rendered layout layouts/application.html.erb (Duration: 85.1ms | Allocations: 34708)
+Completed 200 OK in 162ms (Views: 90.3ms | ActiveRecord: 1.7ms | Allocations: 49303)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:39:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 13766)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 18856)
+Completed 200 OK in 73ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 23231)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:39:43 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.2ms | Allocations: 13751)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 18751)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 23027)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:40:49 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 13764)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 18851)
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 23175)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:43:38 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 514)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 46.0ms | Allocations: 13785)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 18873)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.0ms | Allocations: 23169)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:44:26 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 13756)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 18843)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 23146)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:45:04 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 57.6ms | Allocations: 13752)
+  Rendered layout layouts/application.html.erb (Duration: 81.9ms | Allocations: 18751)
+Completed 200 OK in 98ms (Views: 87.0ms | ActiveRecord: 0.0ms | Allocations: 23027)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:45:15 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 44.0ms | Allocations: 13755)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 18842)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.0ms | Allocations: 23141)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:45:17 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 12715)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 17302)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 19301)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:47:04 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 13759)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 18846)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 23042)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:49:08 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.9ms | Allocations: 13970)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 14044)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms | Allocations: 18304)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    31:     <% end %>
+    32: 
+    33:     <div class="text-center">
+    34:       <%= link_to "Log in", new_session_path %>
+    35:     </div>
+    36: 
+    37:   </div>
+  
+app/views/devise/registrations/new.html.erb:34
+Started POST "/usuarios" for ::1 at 2021-10-25 22:50:27 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 13201)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 18278)
+Completed 200 OK in 55ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 22621)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:53:41 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.7ms | Allocations: 13196)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 18185)
+Completed 200 OK in 61ms (Views: 54.9ms | ActiveRecord: 0.0ms | Allocations: 22520)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:54:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 13187)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 18177)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.0ms | Allocations: 22455)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:55:04 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 13185)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 18174)
+Completed 200 OK in 58ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 22451)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:55:17 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 13196)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 18274)
+Completed 200 OK in 47ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 22577)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:55:44 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 39.7ms | Allocations: 13187)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 18176)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 22478)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:56:24 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.0ms | Allocations: 13184)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 18173)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.0ms | Allocations: 22451)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:59:01 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 13196)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 18278)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 22556)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-25 22:59:11 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 13187)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 18264)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 22566)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-25 22:59:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.8ms | Allocations: 669)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 16592)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 21285)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 22958)
+
+
+Started GET "/" for ::1 at 2021-10-25 22:59:49 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4995)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 6756)
+
+
+Started GET "/" for ::1 at 2021-10-25 22:59:49 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 4596)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 5119)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 22:59:53 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.2ms | Allocations: 10531)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 15115)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 15744)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 23:00:22 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 10942)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 15940)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 17873)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 23:00:25 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 10389)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 14885)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 15572)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 23:00:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 10936)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 16000)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 17922)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-25 23:00:46 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 10952)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 16016)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 18025)
+
+
