@@ -9817,3 +9817,638 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 15173)
 
 
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 17:08:49 -0300
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 382.3ms | Allocations: 23213)
+  Rendered layout layouts/application.html.erb (Duration: 17305.2ms | Allocations: 120621)
+Completed 200 OK in 17465ms (Views: 17422.0ms | ActiveRecord: 0.9ms | Allocations: 133391)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 17:09:18 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.8ms | Allocations: 11117)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 15823)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms | Allocations: 18108)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 17:09:30 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "nathanatrix2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (2.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "nathanatrix2@gmail.com"], ["encrypted_password", "$2a$12$7UITMKCxCcxhij4HzWTHTeqh4iqYgumqizj.sdP.zp7Et7LTIxwpy"], ["created_at", "2021-10-26 20:09:31.516806"], ["updated_at", "2021-10-26 20:09:31.516806"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.4ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2021-10-26 20:09:31.530529"], ["last_sign_in_at", "2021-10-26 20:09:31.530529"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", "2021-10-26 20:09:31.530705"], ["id", 2]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000usuarios/sign-up
+Completed 302 Found in 832ms (ActiveRecord: 9.6ms | Allocations: 19693)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 17:10:48 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 2.6ms | Allocations: 9448)
+
+
+Started GET "/" for ::1 at 2021-10-26 17:10:48 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 194)
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 6039)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 0.5ms | Allocations: 7816)
+
+
+Started DELETE "/usuarios/sign_out" for ::1 at 2021-10-26 17:10:51 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 0.2ms | Allocations: 3086)
+
+
+Started GET "/" for ::1 at 2021-10-26 17:10:51 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4758)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 5312)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-10-26 17:10:54 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 10521)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 15205)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 16145)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 17:11:05 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix3@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "nathanatrix3@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "nathanatrix3@gmail.com"], ["encrypted_password", "$2a$12$n1toifRscjseg4umVq9BeuUewQEqHALZYrc1.PJPTrAv.rkJWOm0G"], ["created_at", "2021-10-26 20:11:06.207771"], ["updated_at", "2021-10-26 20:11:06.207771"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.4ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2021-10-26 20:11:06.220049"], ["last_sign_in_at", "2021-10-26 20:11:06.220049"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", "2021-10-26 20:11:06.220259"], ["id", 3]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000cadastros/new
+Completed 302 Found in 302ms (ActiveRecord: 5.2ms | Allocations: 13991)
+
+
+Started POST "/usuarios" for ::1 at 2021-10-26 17:11:31 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix3@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 41ms (ActiveRecord: 3.2ms | Allocations: 9105)
+
+
+Started GET "/" for ::1 at 2021-10-26 17:11:31 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5885)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.1ms | Allocations: 7104)
+
+
+Started DELETE "/usuarios/sign_out" for ::1 at 2021-10-26 17:14:40 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 1.0ms | Allocations: 9908)
+
+
+Started GET "/" for ::1 at 2021-10-26 17:14:41 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4892)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 6106)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 17:14:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 10294)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 14977)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 16013)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-10-26 17:14:48 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "nathanatrix@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.9ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 3], ["current_sign_in_at", "2021-10-26 20:14:49.195328"], ["last_sign_in_at", "2021-10-26 19:31:15.015286"], ["updated_at", "2021-10-26 20:14:49.195697"], ["id", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 381ms (ActiveRecord: 3.0ms | Allocations: 9144)
+
+
+Started GET "/usuario" for ::1 at 2021-10-26 17:14:49 -0300
+  
+ActionController::RoutingError (uninitialized constant CadastroController
+Did you mean?  CadastrosController):
+  
+Started GET "/homespage" for ::1 at 2021-10-26 17:15:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homespage"):
+  
+Started GET "/homepage" for ::1 at 2021-10-26 17:15:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/homepage"):
+  
+Started GET "/homes" for ::1 at 2021-10-26 17:15:17 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5742)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 6269)
+
+
+Started GET "/cadastros/" for ::1 at 2021-10-26 17:15:37 -0300
+Processing by CadastrosController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.4ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 5357)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 10098)
+Completed 200 OK in 102ms (Views: 49.2ms | ActiveRecord: 2.1ms | Allocations: 21171)
+
+
+Started GET "/cadastros/" for ::1 at 2021-10-26 17:15:46 -0300
+Processing by CadastrosController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.3ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 4897)
+  Rendered layout layouts/application.html.erb (Duration: 125.8ms | Allocations: 9819)
+Completed 200 OK in 160ms (Views: 124.4ms | ActiveRecord: 5.6ms | Allocations: 20115)
+
+
+Started DELETE "/usuarios/sign_out" for ::1 at 2021-10-26 17:15:50 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2534)
+
+
+Started GET "/" for ::1 at 2021-10-26 17:15:50 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4890)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 6103)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-10-26 17:15:53 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 10363)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 15044)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 16078)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-10-26 17:15:58 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"nathanatrix@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "nathanatrix@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 4], ["current_sign_in_at", "2021-10-26 20:15:59.188144"], ["last_sign_in_at", "2021-10-26 20:14:49.195328"], ["updated_at", "2021-10-26 20:15:59.188358"], ["id", 1]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 293ms (ActiveRecord: 2.7ms | Allocations: 8382)
+
+
+Started GET "/usuario" for ::1 at 2021-10-26 17:15:59 -0300
+Processing by CadastrosController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cadastros/index.html.erb within layouts/application
+  [1m[36mCadastro Load (0.1ms)[0m  [1m[34mSELECT "cadastros".* FROM "cadastros"[0m
+  ↳ app/views/cadastros/index.html.erb:18
+  Rendered cadastros/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 985)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5535)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 7109)
+
+
+Started GET "/usuarios" for ::1 at 2021-10-26 17:37:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/usuarios"):
+  
+Started GET "/usuarios" for ::1 at 2021-10-27 10:53:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/usuarios"):
+  
+Started GET "/" for ::1 at 2021-10-27 10:53:30 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:29
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 214.6ms | Allocations: 6288)
+Completed 200 OK in 223ms (Views: 215.6ms | ActiveRecord: 1.0ms | Allocations: 6759)
+
+
+Started GET "/users" for ::1 at 2021-10-28 17:45:24 -0300
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20211028203924_create_aulas.rb
+20211028204035_create_cursos.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAulas (20211028203924)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "aulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211028203924"]]
+  [1m[36mTRANSACTION (412.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCursos (20211028204035)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cursos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "link" varchar, "aulas_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_71a712b0d4"
+FOREIGN KEY ("aulas_id")
+  REFERENCES "aulas" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cursos_on_aulas_id" ON "cursos" ("aulas_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211028204035"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2021-10-28 17:47:18 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2021-10-28 17:47:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/cursos" for ::1 at 2021-10-28 17:47:31 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/index.html.erb within layouts/application
+  Rendered cursos/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1450)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.6ms | Allocations: 15729)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Cursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Link</th>
+      <th>
+        Aulas
+        <p>Titulo | URL</p>
+      </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td><%= curso.titulo %></td>
+        <td><%= curso.link %></td>
+        <td>
+          <% curso.aulas.each do |aula| %>
+            <span><%= aula.titulo %> | </span>
+            <span><%= aula.url %></span>
+        </td>
+
+        <br>
+        <br>
+        <td><%= link_to 'Show', curso %></td>
+        <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
+        <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curso', new_curso_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Cursos</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>Titulo</th>
+9:          <th>Link</th>
+10:          <th>
+11:            Aulas
+12:            <p>Titulo | URL</p>
+13:          </th>
+14:          <th colspan="3"></th>
+15:        </tr>
+16:      </thead>
+17:    
+18:      <tbody>
+19:        <% @cursos.each do |curso| %>
+20:          <tr>
+21:            <td><%= curso.titulo %></td>
+22:            <td><%= curso.link %></td>
+23:            <td>
+24:              <% curso.aulas.each do |aula| %>
+25:                <span><%= aula.titulo %> | </span>
+26:                <span><%= aula.url %></span>
+27:            </td>
+28:    
+29:            <br>
+30:            <br>
+31:            <td><%= link_to 'Show', curso %></td>
+32:            <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
+33:            <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+34:          </tr>
+35:        <% end %>
+36:      </tbody>
+37:    </table>
+38:    
+39:    <br>
+40:    
+41:    <%= link_to 'New Curso', new_curso_path %>
+  
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/cursos" for ::1 at 2021-10-28 17:49:00 -0300
+Processing by CursosController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/index.html.erb within layouts/application
+  Rendered cursos/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1323)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1398)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.4ms | Allocations: 12526)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Cursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Link</th>
+      <th>
+        Aulas
+        <p>Titulo | URL</p>
+      </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td><%= curso.titulo %></td>
+        <td><%= curso.link %></td>
+        <td>
+          <% curso.aulas.each do |aula| %>
+            <span><%= aula.titulo %> | </span>
+            <span><%= aula.url %></span>
+        </td>
+
+        <br>
+        <br>
+        <td><%= link_to 'Show', curso %></td>
+        <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
+        <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curso', new_curso_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Cursos</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>Titulo</th>
+9:          <th>Link</th>
+10:          <th>
+11:            Aulas
+12:            <p>Titulo | URL</p>
+13:          </th>
+14:          <th colspan="3"></th>
+15:        </tr>
+16:      </thead>
+17:    
+18:      <tbody>
+19:        <% @cursos.each do |curso| %>
+20:          <tr>
+21:            <td><%= curso.titulo %></td>
+22:            <td><%= curso.link %></td>
+23:            <td>
+24:              <% curso.aulas.each do |aula| %>
+25:                <span><%= aula.titulo %> | </span>
+26:                <span><%= aula.url %></span>
+27:            </td>
+28:    
+29:            <br>
+30:            <br>
+31:            <td><%= link_to 'Show', curso %></td>
+32:            <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
+33:            <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+34:          </tr>
+35:        <% end %>
+36:      </tbody>
+37:    </table>
+38:    
+39:    <br>
+40:    
+41:    <%= link_to 'New Curso', new_curso_path %>
+  
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+app/views/cursos/index.html.erb:44: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/cursos" for ::1 at 2021-10-28 17:49:42 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/index.html.erb within layouts/application
+  [1m[36mCurso Load (0.2ms)[0m  [1m[34mSELECT "cursos".* FROM "cursos"[0m
+  ↳ app/views/cursos/index.html.erb:19
+  Rendered cursos/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1376)
+  Rendered layout layouts/application.html.erb (Duration: 3888.6ms | Allocations: 28653)
+Completed 200 OK in 3896ms (Views: 3892.3ms | ActiveRecord: 0.3ms | Allocations: 31422)
+
+
+Started GET "/cursos/new" for ::1 at 2021-10-28 17:50:27 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/new.html.erb within layouts/application
+  [1m[36mAula Load (0.2ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/cursos/_form.html.erb:9
+  Rendered cursos/_form.html.erb (Duration: 393.9ms | Allocations: 26678)
+  Rendered cursos/new.html.erb within layouts/application (Duration: 394.9ms | Allocations: 27071)
+  Rendered layout layouts/application.html.erb (Duration: 400.1ms | Allocations: 31728)
+Completed 200 OK in 412ms (Views: 400.4ms | ActiveRecord: 1.1ms | Allocations: 36576)
+
+
+Started GET "/cursos/new" for ::1 at 2021-10-28 19:16:16 -0300
+Processing by CursosController#new as HTML
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/new.html.erb within layouts/application
+  [1m[36mAula Load (0.7ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/cursos/_form.html.erb:9
+  Rendered cursos/_form.html.erb (Duration: 32.7ms | Allocations: 12419)
+  Rendered cursos/new.html.erb within layouts/application (Duration: 79.4ms | Allocations: 12802)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 17841)
+Completed 200 OK in 167ms (Views: 105.4ms | ActiveRecord: 12.0ms | Allocations: 21700)
+
+
+Started GET "/cursos/new" for ::1 at 2021-10-28 19:19:22 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/new.html.erb within layouts/application
+  [1m[36mAula Load (0.2ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/cursos/_form.html.erb:9
+  Rendered cursos/_form.html.erb (Duration: 30.8ms | Allocations: 12378)
+  Rendered cursos/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 12768)
+  Rendered layout layouts/application.html.erb (Duration: 10682.5ms | Allocations: 75240)
+Completed 200 OK in 10693ms (Views: 10685.2ms | ActiveRecord: 0.4ms | Allocations: 77902)
+
+
+Started GET "/cursos/new" for ::1 at 2021-10-28 19:19:54 -0300
+Processing by CursosController#new as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/new.html.erb within layouts/application
+  [1m[36mAula Load (0.1ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/cursos/_form.html.erb:9
+  Rendered cursos/_form.html.erb (Duration: 24.2ms | Allocations: 11862)
+  Rendered cursos/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 11974)
+  Rendered layout layouts/application.html.erb (Duration: 9738.8ms | Allocations: 74226)
+Completed 200 OK in 9743ms (Views: 9739.5ms | ActiveRecord: 0.2ms | Allocations: 75910)
+
+
