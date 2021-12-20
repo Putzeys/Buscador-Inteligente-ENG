@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :cursos
   resources :aulas
   devise_for :usuarios, controllers: { registrations: "registrations" } # redireciona após cadastro
-  get '/usuario' => "cursos#index", :as => :usuario_root # redireciona após login
+  get '/usuario' => "pages#index", :as => :usuario_root # redireciona após login
+  get "/pages", to: "pages#index"
   root 'homes#index'
   get 'sessions/new'
   get 'sessions/create'

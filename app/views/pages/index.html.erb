@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <!-- **DO THIS**: -->
+    <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1019.0.min.js"></script>
+    <script>
+    var albumBucketName = "buscador-inteligente-eng";
+var bucketRegion = "sa-east-1";
+var IdentityPoolId = "sa-east-1:b6d2fb14-b0a7-485e-8744-e75931912b5e";
+
+AWS.config.update({
+  region: bucketRegion,
+  credentials: new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: IdentityPoolId
+  })
+});
+
+var s3 = new AWS.S3({
+  apiVersion: "2006-03-01",
+  params: { Bucket: albumBucketName }
+});
+
+function getHtml(template) {
+    return template.join('\n');
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.config]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.listSalas]
+function listSalas() {
+  s3.listObjects({ Delimiter: "/" }, function(err, data) {
+    if (err) {
+      return alert("Erro ao listar suas salas: " + err.message);
+    } else {
+        var albums = data.CommonPrefixes.map(function(commonPrefix) {
+        var prefix = commonPrefix.Prefix;
+        var albumName = decodeURIComponent(prefix.replace("/", ""));
+        return getHtml([
+          "<li>",
+          "<span onclick=\"deleteAlbum('" + albumName + "')\">X</span>",
+          "<span onclick=\"viewAlbum('" + albumName + "')\">",
+          albumName,
+          "</span>",
+          "</li>"
+        ]);
+      });
+      var message = albums.length
+        ? getHtml([
+            "<p>Clique no nome da sala para ver seus vídeos.</p>",
+            "<p>Clique no X para deletar a Sala.</p>"
+          ])
+        : "<p>Você não possui nenhuma sala, crie uma! :).";
+      var htmlTemplate = [
+        "<h2>Minhas Salas: </h2>",
+        message,
+        "<ul>",
+        getHtml(albums),
+        "</ul>",
+        "<button onclick=\"createAlbum(prompt('Nome da Sala:'))\">",
+        "Criar Sala",
+        "</button>"
+      ];
+      document.getElementById("app").innerHTML = getHtml(htmlTemplate);
+    }
+  });
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.listSalas]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.createAlbum]
+function createAlbum(albumName) {
+  albumName = albumName.trim();
+  if (!albumName) {
+    return alert("O nome da sala deve ter pelo menos um caracter que não é um espaço.");
+  }
+  if (albumName.indexOf("/") !== -1) {
+    return alert("O nome da sala não pode conter barras.");
+  }
+  var albumKey = encodeURIComponent(albumName);
+  s3.headObject({ Key: albumKey }, function(err, data) {
+    if (!err) {
+      return alert("Sala ja existe.");
+    }
+    if (err.code !== "NotFound") {
+      return alert("Erro ao criar sala " + err.message);
+    }
+    s3.putObject({ Key: albumKey }, function(err, data) {
+      if (err) {
+        return alert("Erro ao criar sala " + err.message);
+      }
+      alert("Sala criada com sucesso.");
+      viewAlbum(albumName);
+    });
+  });
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.createAlbum]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.viewAlbum]
+function viewAlbum(albumName) {
+  var albumPhotosKey = encodeURIComponent(albumName) + "/";
+  s3.listObjects({ Prefix: albumPhotosKey }, function(err, data) {
+    if (err) {
+      return alert("Erro ao visualizar aulas: " + err.message);
+    }
+    // 'this' references the AWS.Response instance that represents the response
+    var href = this.request.httpRequest.endpoint.href;
+    var bucketUrl = href + albumBucketName + "/";
+
+    var photos = data.Contents.map(function(photo) {
+      var photoKey = photo.Key;
+      var photoUrl = bucketUrl + encodeURIComponent(photoKey);
+      var n =photoKey.indexOf('/');
+      var subtitles = 'https://buscador-inteligente-eng-legendas.s3.sa-east-1.amazonaws.com/'+ photoKey.slice(n+1)+'.vtt';
+      console.log(subtitles)
+      return getHtml([
+        "<span>",
+        "<div>",
+        '<video width="320" height="240" controls crossorigin="anonymous"><source src="'+photoUrl+'" type="video/mp4"><track src="' + subtitles + '" kind="subtitles" srclang="pt" label="Portugues">',
+        "</div>",
+        "<div>",
+        "<span onclick=\"deletePhoto('" +
+          albumName +
+          "','" +
+          photoKey +
+          "')\">",
+        "X",
+        "</span>",
+        "<span>",
+        photoKey.replace(albumPhotosKey, ""),
+        "</span>",
+        "</div>",
+        "</span>"
+      ]);
+    });
+    var message = photos.length
+      ? "<p>Clique no X para deletar o vídeo da sua Sala</p>"
+      : "<p>Você não possui nenhum vídeo, por favor adicione um vídeo</p>";
+    var htmlTemplate = [
+      "<h2>",
+      "Sala: " + albumName,
+      "</h2>",
+      message,
+      "<div>",
+      getHtml(photos),
+      "</div>",
+      '<input id="photoupload" type="file" accept="video/*">',
+      '<button id="addphoto" onclick="addPhoto(\'' + albumName + "')\">",
+      "Adicionar Aula",
+      "</button>",
+      '<button onclick="listSalas()">',
+      "Voltar para minhas salas",
+      "</button>"
+    ];
+    document.getElementById("app").innerHTML = getHtml(htmlTemplate);
+  });
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.viewAlbum]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.addPhoto]
+function addPhoto(albumName) {
+  var files = document.getElementById("photoupload").files;
+  if (!files.length) {
+    return alert("Escolha um vídeo antes.");
+  }
+  var file = files[0];
+  var fileName = file.name;
+  var albumPhotosKey = encodeURIComponent(albumName) + "/";
+
+  var photoKey = albumPhotosKey + fileName;
+
+  // Use S3 ManagedUpload class as it supports multipart uploads
+  var upload = new AWS.S3.ManagedUpload({
+    params: {
+      Bucket: albumBucketName,
+      Key: photoKey,
+      Body: file,
+      ACL:'public-read'
+    }
+  });
+
+  var promise = upload.promise();
+
+  promise.then(
+    function(data) {
+      alert("Vídeo enviado com sucesso.");
+      viewAlbum(albumName);
+    },
+    function(err) {
+      return alert("Erro ao enviar seu vídeo: ", err.message);
+    }
+  );
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.addPhoto]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.deletePhoto]
+function deletePhoto(albumName, photoKey) {
+  s3.deleteObject({ Key: photoKey }, function(err, data) {
+    if (err) {
+      return alert("Erro ao deletar vídeo: ", err.message);
+    }
+    alert("Vídeo deletado com sucesso.");
+    viewAlbum(albumName);
+  });
+}
+// snippet-end:[s3.JavaScript.photoAlbumExample.deletePhoto]
+
+// snippet-start:[s3.JavaScript.photoAlbumExample.deleteAlbum]
+function deleteAlbum(albumName) {
+  var albumKey = encodeURIComponent(albumName) + "/";
+  s3.listObjects({ Prefix: albumKey }, function(err, data) {
+    if (err) {
+      return alert("Erro ao deletar Sala: ", err.message);
+    }
+    var objects = data.Contents.map(function(object) {
+      return { Key: object.Key };
+    });
+    s3.deleteObjects(
+      {
+        Delete: { Objects: objects, Quiet: true }
+      },
+      function(err, data) {
+        if (err) {
+          return alert("Erro ao deletar Sala", err.message);
+        }
+        alert("Sala deletada com sucesso.");
+        listSalas();
+      }
+    );
+  });
+}
+    </script>
+    <script>
+       listSalas();
+    </script>
+  </head>
+  <body>
+    <h1>Buscador inteligente</h1>
+    <div id="app"></div>
+  </body>
+</html>

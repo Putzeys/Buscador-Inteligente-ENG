@@ -10452,3 +10452,357 @@ Processing by CursosController#new as HTML
 Completed 200 OK in 9743ms (Views: 9739.5ms | ActiveRecord: 0.2ms | Allocations: 75910)
 
 
+Started GET "/" for ::1 at 2021-12-18 21:49:22 -0300
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 516)
+Started GET "/" for ::1 at 2021-12-18 21:49:26 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+Started GET "/" for ::1 at 2021-12-18 21:49:35 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 18484.4ms | Allocations: 256289)
+Completed 200 OK in 18518ms (Views: 18492.2ms | ActiveRecord: 1.8ms | Allocations: 262439)
+
+
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 14784.4ms | Allocations: 231517)
+Completed 200 OK in 14786ms (Views: 14784.8ms | ActiveRecord: 0.1ms | Allocations: 232131)
+
+
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 2712.7ms | Allocations: 112383)
+Completed 200 OK in 2714ms (Views: 2713.1ms | ActiveRecord: 0.1ms | Allocations: 112864)
+
+
+Started GET "/usuarios/sign_in" for ::1 at 2021-12-18 21:49:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 84.4ms | Allocations: 23076)
+  Rendered layout layouts/application.html.erb (Duration: 93.1ms | Allocations: 27825)
+Completed 200 OK in 106ms (Views: 96.2ms | ActiveRecord: 0.0ms | Allocations: 36034)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-12-18 21:50:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "jgseike@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.5ms | Allocations: 2093)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 10317)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 14929)
+Completed 200 OK in 220ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 16887)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-12-18 21:50:08 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "jgseike@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms | Allocations: 1672)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 10131)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 14718)
+Completed 200 OK in 207ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 15370)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-12-18 21:50:12 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "jgseike@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 1465)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 10127)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 14629)
+Completed 200 OK in 202ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 15271)
+
+
+Started POST "/usuarios/sign_in" for ::1 at 2021-12-18 21:50:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "jgseike@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 1483)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 10127)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 14630)
+Completed 200 OK in 204ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 15278)
+
+
+Started GET "/usuarios/sign_up" for ::1 at 2021-12-18 21:50:18 -0300
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 11297)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 16040)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 18324)
+
+
+Started POST "/usuarios" for ::1 at 2021-12-18 21:50:25 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>{"email"=>"jgseike@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "jgseike@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jgseike@gmail.com"], ["encrypted_password", "$2a$12$MqFWOKoQY7HXAResvklcGucR6sxLEPbrnhJAEBkN4rkleTu56Bbk6"], ["created_at", "2021-12-19 00:50:25.483884"], ["updated_at", "2021-12-19 00:50:25.483884"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2021-12-19 00:50:25.489078"], ["last_sign_in_at", "2021-12-19 00:50:25.489078"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", "2021-12-19 00:50:25.489202"], ["id", 4]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/cursos
+Completed 302 Found in 210ms (ActiveRecord: 3.2ms | Allocations: 12267)
+
+
+Started GET "/cursos" for ::1 at 2021-12-18 21:50:25 -0300
+Processing by CursosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/index.html.erb within layouts/application
+  [1m[36mCurso Load (0.4ms)[0m  [1m[34mSELECT "cursos".* FROM "cursos"[0m
+  ↳ app/views/cursos/index.html.erb:19
+  Rendered cursos/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1322)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6097)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 10294)
+
+
+Started GET "/cursos" for ::1 at 2021-12-18 22:14:18 -0300
+Processing by CursosController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cursos/index.html.erb within layouts/application
+  [1m[36mCurso Load (0.2ms)[0m  [1m[34mSELECT "cursos".* FROM "cursos"[0m
+  ↳ app/views/cursos/index.html.erb:19
+  Rendered cursos/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 734)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5312)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 1.2ms | Allocations: 8062)
+
+
+Started GET "/" for ::1 at 2021-12-19 11:00:27 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 516)
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 1176.3ms | Allocations: 37625)
+Completed 200 OK in 1192ms (Views: 1179.5ms | ActiveRecord: 0.9ms | Allocations: 42607)
+
+
+Started GET "/" for ::1 at 2021-12-19 11:00:29 -0300
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6499)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 7342)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 11:09:00 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4998)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 9524)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 11:09:38 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5576)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 8310)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 13:17:47 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 5675)
+Completed 200 OK in 50ms (Views: 36.3ms | ActiveRecord: 0.6ms | Allocations: 9449)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 19:15:25 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5586)
+Completed 200 OK in 38ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 9388)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 19:16:19 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 5667)
+Completed 200 OK in 71ms (Views: 56.6ms | ActiveRecord: 0.1ms | Allocations: 8386)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 19:32:52 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4734)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 1.1ms | Allocations: 7528)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 19:33:02 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 429)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5590)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 8145)
+
+
+Started GET "/[object%20Object].vtt" for ::1 at 2021-12-19 19:33:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/[object%20Object].vtt"):
+  
+Started GET "/pages" for ::1 at 2021-12-19 19:33:58 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5673)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 8421)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 21:31:31 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4678)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 7471)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 22:55:04 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 433)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 5681)
+Completed 200 OK in 33ms (Views: 19.5ms | ActiveRecord: 0.9ms | Allocations: 9237)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 22:56:27 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4710)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6449)
+
+
+Started GET "/pages" for ::1 at 2021-12-19 23:20:19 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 429)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5591)
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 0.9ms | Allocations: 9179)
+
+
+Started GET "/pages" for ::1 at 2021-12-20 00:01:35 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 429)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5588)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 0.9ms | Allocations: 9359)
+
+
+Started GET "/pages" for ::1 at 2021-12-20 00:02:39 -0300
+Processing by PagesController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 434)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5647)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 8372)
+
+
+Started GET "/pages" for ::1 at 2021-12-20 01:12:44 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4646)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 7440)
+
+
+Started GET "/pages" for ::1 at 2021-12-20 01:21:32 -0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4645)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.6ms | Allocations: 7213)
+
+
