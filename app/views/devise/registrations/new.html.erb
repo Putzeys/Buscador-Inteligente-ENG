@@ -1,0 +1,39 @@
+
+<div class="container mx-auto mt-5", style="max-width: 500px">
+  <h2 class="text-center">Criar conta</h2>
+
+  <div class="form-control">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    label_html: { class: "mb-2 mt-2" },
+                    input_html: { autocomplete: "email", placeholder: "exemplo@email.com"}%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("É necessário pelo menos #{@minimum_password_length} caracteres" if @minimum_password_length),
+                    label: 'Senha',
+                    label_html: { class: "mb-2 mt-3" },
+                    input_html: { autocomplete: "new-password", placeholder: "Digite sua senha..." } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    label: 'Confirme sua senha',
+                    label_html: { class: "mb-2 mt-3" },
+                    input_html: { autocomplete: "new-password", placeholder: "Confirme sua senha..." } %>
+      </div>
+
+      <div class="form-actions mt-4 mx-auto d-grid gap-2 col-5">
+        <%= f.button :submit, "Criar conta", :class => "btn btn-primary" %>
+      </div>
+    <% end %>
+
+    <div class="text-center">
+      <%= link_to "Entrar", new_usuario_session_path, :class => "btn btn-link" %>
+    </div>
+
+  </div>
+
+</div>

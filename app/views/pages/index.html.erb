@@ -20,6 +20,13 @@ var s3 = new AWS.S3({
   apiVersion: "2006-03-01",
   params: { Bucket: albumBucketName }
 });
+<<<<<<< HEAD
+=======
+
+function getHtml(template) {
+    return template.join('\n');
+}
+>>>>>>> dev
 // snippet-end:[s3.JavaScript.photoAlbumExample.config]
 
 // snippet-start:[s3.JavaScript.photoAlbumExample.listSalas]
@@ -104,10 +111,20 @@ function viewAlbum(albumName) {
     var photos = data.Contents.map(function(photo) {
       var photoKey = photo.Key;
       var photoUrl = bucketUrl + encodeURIComponent(photoKey);
+<<<<<<< HEAD
       return getHtml([
         "<span>",
         "<div>",
         '<img style="width:128px;height:128px;" src="' + photoUrl + '"/>',
+=======
+      var n =photoKey.indexOf('/');
+      var subtitles = 'https://buscador-inteligente-eng-legendas.s3.sa-east-1.amazonaws.com/'+ photoKey.slice(n+1)+'.vtt';
+      console.log(subtitles)
+      return getHtml([
+        "<span>",
+        "<div>",
+        '<video width="320" height="240" controls crossorigin="anonymous"><source src="'+photoUrl+'" type="video/mp4"><track src="' + subtitles + '" kind="subtitles" srclang="pt" label="Portugues">',
+>>>>>>> dev
         "</div>",
         "<div>",
         "<span onclick=\"deletePhoto('" +
@@ -135,7 +152,11 @@ function viewAlbum(albumName) {
       "<div>",
       getHtml(photos),
       "</div>",
+<<<<<<< HEAD
       '<input id="photoupload" type="file" accept="image/*">',
+=======
+      '<input id="photoupload" type="file" accept="video/*">',
+>>>>>>> dev
       '<button id="addphoto" onclick="addPhoto(\'' + albumName + "')\">",
       "Adicionar Aula",
       "</button>",
@@ -222,9 +243,12 @@ function deleteAlbum(albumName) {
 }
     </script>
     <script>
+<<<<<<< HEAD
        function getHtml(template) {
           return template.join('\n');
        }
+=======
+>>>>>>> dev
        listSalas();
     </script>
   </head>

@@ -7,6 +7,19 @@ ruby '3.0.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
+<<<<<<< HEAD
+=======
+# Bootstrap
+gem 'bootstrap', '~> 5.1.0'
+# JQuery
+gem 'jquery-rails'
+#Simple_form
+gem 'simple_form'
+# Devise
+gem 'devise'
+#Trix (rich text)
+gem 'trix-rails', require: 'trix'
+>>>>>>> dev
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

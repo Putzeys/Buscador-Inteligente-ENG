@@ -7,10 +7,47 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+=======
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      abbr {
+        text-decoration: none !important
+      }
+    </style>
+>>>>>>> dev
   </head>
 
   <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="buscador-inteligente w3-red w3-card w3-left-align w3-large">
+        <a class="buscador-inteligente-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="buscador-inteligente-item w3-button w3-padding-large w3-white">BuscadorInteligente</a>
+
+        <% if usuario_signed_in? %>
+            <%= button_to "Sair", destroy_usuario_session_path, method: :delete,
+            :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right", 
+            form: {style: 'display: inline'} %>
+        <% else %>
+          <%= link_to "Criar conta", new_usuario_registration_path, :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right w3-border-left" %>
+          <%= link_to "Entrar", new_usuario_session_path, :class => "buscador-inteligente-item w3-button w3-padding-large w3-white w3-right" %>
+        <% end %>
+
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="buscador-inteligente-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      </div>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
